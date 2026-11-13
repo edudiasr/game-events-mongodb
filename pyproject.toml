@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["events"]
+
+[project]
+name = "game-events-mongodb"
+version = "1.0.0"
+description = "Eventos de um servidor de DayZ no MongoDB: validação, índices e aggregation pipeline"
+requires-python = ">=3.11"
+dependencies = ["pymongo>=4.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
